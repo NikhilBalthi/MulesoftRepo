@@ -22,7 +22,7 @@
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-clean-plugin</artifactId>
-				<version>3.2.0</version>
+				<version>3.8.2</version>
 			</plugin>
 			
 			<plugin>
@@ -41,6 +41,7 @@
 				      <environment>Sandbox</environment>
 				      <workers>1</workers>
 				      <workerType>Micro</workerType>
+				      <region>us-east-2</region>
 				      <objectStoreV2>true</objectStoreV2>
 				    </cloudHubDeployment>
   				</configuration>
