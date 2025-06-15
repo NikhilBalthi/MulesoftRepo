@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<mule xmlns:ee="http://www.mulesoft.org/schema/mule/ee/core" xmlns:http="http://www.mulesoft.org/schema/mule/http"
+	xmlns="http://www.mulesoft.org/schema/mule/core"
+	xmlns:doc="http://www.mulesoft.org/schema/mule/documentation" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.mulesoft.org/schema/mule/core http://www.mulesoft.org/schema/mule/core/current/mule.xsd
+http://www.mulesoft.org/schema/mule/http http://www.mulesoft.org/schema/mule/http/current/mule-http.xsd
+http://www.mulesoft.org/schema/mule/ee/core http://www.mulesoft.org/schema/mule/ee/core/current/mule-ee.xsd">
+	<http:listener-config name="HTTP_Listener_config" doc:name="HTTP Listener config" doc:id="432c662b-7c6a-47d3-8294-c28bd52043dd" >
+		<http:listener-connection host="0.0.0.0" port="8081" />
+	</http:listener-config>
+	<flow name="dwFlow" doc:id="6a9f6f90-462d-41ff-a8bf-520e98746f64" >
+		<http:listener doc:name="Listener" doc:id="ee49c9c9-5cb2-4c1d-b298-8e9f76e799c6" path="/dw" config-ref="HTTP_Listener_config"/>
+		<logger level="INFO" doc:name="Logger" doc:id="f2d837af-507b-4f4f-a4bc-688aafbc2a53" message="#[payload]"/>
+		<ee:transform doc:name="Transform Message" doc:id="777d5a5a-ef0d-44cb-8040-01235a953052" >
+			<ee:message >
+				<ee:set-payload ><![CDATA[%dw 2.0
+output application/java
+---
+payload]]></ee:set-payload>
+				<ee:set-attributes ><![CDATA[%dw 2.0
+output application/java
+---
+uuid()]]></ee:set-attributes>
+			</ee:message>
+			<ee:variables >
+				<ee:set-variable variableName="firstName" ><![CDATA[%dw 2.0
+output application/json
+---
+payload.firstName]]></ee:set-variable>
+				<ee:set-variable variableName="lastName" ><![CDATA[%dw 2.0
+output application/json
+---
+payload.lastName]]></ee:set-variable>
+			</ee:variables>
+		</ee:transform>
+		<logger level="INFO" doc:name="Logger payload" doc:id="4a8f77f5-5baf-4a38-84cb-d59c59618511" message="#[payload]"/>
+		<logger level="INFO" doc:name="vars Logger firstName" doc:id="65da086c-5fcf-4723-b707-bfdfbbb833b8" message="#[vars.firstName]"/>
+		<logger level="INFO" doc:name="Logger lastName" doc:id="71bff6d7-f799-404e-95e9-3888568de02a" message="#[vars.lastName]"/>
+		<logger level="INFO" doc:name="Logger attributes" doc:id="c6051000-bff1-42bb-ac85-34b88d944096" message="#[attributes]"/>
+	</flow>
+</mule>
