@@ -37,7 +37,7 @@
 				      <muleVersion>4.9.4</muleVersion>
 				      <username>nikhilbalthi99</username>
 				      <password>BBnik667!!</password>
-				      <applicationName>ci-cd-firstone</applicationName>
+				      <applicationName>ci-cd-check</applicationName>
 				      <environment>Sandbox</environment>
 				      <workers>1</workers>
 				      <workerType>Micro</workerType>
