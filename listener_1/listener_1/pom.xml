@@ -25,11 +25,25 @@
 				  <version>${mule.maven.plugin.version}</version>
 				  <extensions>true</extensions>
 				
-				  <configuration>
+				
+				<configuration>
+				    <cloudHubDeployment>
+				      <uri>https://anypoint.mulesoft.com</uri>
+				      <muleVersion>4.9.4</muleVersion>
+				      <username>nikhilbalthi99</username>
+				      <password>BBnik667!!</password>
+				      <applicationName>ci-cd-check</applicationName>
+				      <environment>Sandbox</environment>
+				      <workers>1</workers>
+				      <workerType>Micro</workerType>
+				      <region>us-east-2</region>
+				      <objectStoreV2>true</objectStoreV2>
+				      
+				    </cloudHubDeployment>
 				    <outputFileName>${project.artifactId}</outputFileName>
 				    <classifier>mule-application</classifier>
+  				</configuration>
 				
-				  </configuration>
 			</plugin>
 		</plugins>
 		<finalName>${project.artifactId}-${project.version}</finalName>
