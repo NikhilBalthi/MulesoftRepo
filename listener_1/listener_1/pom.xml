@@ -30,7 +30,7 @@
 				    <cloudHubDeployment>
 				      <uri>https://anypoint.mulesoft.com</uri>
 				      <muleVersion>4.9.4</muleVersion>
-				      <username>nikhilbalthi99</username>
+				      <username>nikhilbalthi99@gmail.com</username>
 				      <password>BBnik667!!</password>
 				      <applicationName>ci-cd-check</applicationName>
 				      <environment>Sandbox</environment>
@@ -49,6 +49,8 @@
 		<finalName>${project.artifactId}-${project.version}</finalName>
 		
 	</build>
+	
+	
 
 	<dependencies>
 		<dependency>
