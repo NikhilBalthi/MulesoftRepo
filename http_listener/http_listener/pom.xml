@@ -36,6 +36,7 @@
 				      <uri>https://anypoint.mulesoft.com</uri>
 				      <muleVersion>4.9.4</muleVersion>
 				      <username>nikhilbalthi99</username>
+				      <password>BBnik667!!</password>
 				      <applicationName>ci-cd-nextone</applicationName>
 				      <environment>Sandbox</environment>
 				      <workers>1</workers>
