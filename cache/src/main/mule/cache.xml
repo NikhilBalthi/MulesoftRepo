@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<mule xmlns:http="http://www.mulesoft.org/schema/mule/http" xmlns:ee="http://www.mulesoft.org/schema/mule/ee/core"
+	xmlns:file="http://www.mulesoft.org/schema/mule/file"
+	xmlns="http://www.mulesoft.org/schema/mule/core" xmlns:doc="http://www.mulesoft.org/schema/mule/documentation" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.mulesoft.org/schema/mule/core http://www.mulesoft.org/schema/mule/core/current/mule.xsd
+http://www.mulesoft.org/schema/mule/file http://www.mulesoft.org/schema/mule/file/current/mule-file.xsd
+http://www.mulesoft.org/schema/mule/ee/core http://www.mulesoft.org/schema/mule/ee/core/current/mule-ee.xsd
+http://www.mulesoft.org/schema/mule/http http://www.mulesoft.org/schema/mule/http/current/mule-http.xsd">
+	<http:listener-config name="HTTP_Listener_config" doc:name="HTTP Listener config" doc:id="dc017156-8e4c-4dd5-9def-c64b06507ba3" >
+		<http:listener-connection host="0.0.0.0" port="8081" />
+	</http:listener-config>
+	<flow name="cacheFlow" doc:id="23ff0d71-c26f-4bab-9308-57afda76ed62" >
+		<http:listener doc:name="Listener" doc:id="96b3af15-f300-4320-a2af-e9ff648604d7" config-ref="HTTP_Listener_config" path="/path"/>
+		<logger level="INFO" doc:name="Logger 1" doc:id="a662ede9-a993-4f51-96a2-48dcd2043c0a" message="logger 1"/>
+		<logger level="INFO" doc:name="Logger 2" doc:id="dfd9c8db-0345-4b88-8efc-185f7fb1ff46" message="logger 2"/>
+	</flow>
+</mule>
