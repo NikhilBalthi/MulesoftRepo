@@ -1,0 +1,25 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<types:mule xmlns:types="http://www.mulesoft.org/schema/mule/types">
+  <types:catalog>
+    <types:type name="register-covid-case-metadata" format="json">
+      <types:shape format="weave" example="examples/covid-3.json"><![CDATA[%dw 2.0
+
+type register_covid_case_metadata = {|
+  name: String, 
+  age: Number {"typeId": "int"}, 
+  hobbies: Array<String>
+|} {"example": "{\\\"name\\\":\\\"Alice\\\",\\\"age\\\":30,\\\"hobbies\\\":[\\\"Reading\\\",\\\"Traveling\\\",\\\"Music\\\"]}"}
+
+]]></types:shape>
+    </types:type>
+  </types:catalog>
+  <types:enrichment select="#50fe5dd4-bf76-432b-a0fa-3a3493ee1ebf">
+    <types:processor-declaration>
+      <types:input-event>
+        <types:message>
+          <types:payload type="register-covid-case-metadata"/>
+        </types:message>
+      </types:input-event>
+    </types:processor-declaration>
+  </types:enrichment>
+</types:mule>

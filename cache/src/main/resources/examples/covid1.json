@@ -1,0 +1,40 @@
+{
+  "caseId": "CV20250508-001",
+  "patient": {
+    "firstName": "John",
+    "lastName": "Doe",
+    "age": 34,
+    "gender": "Male",
+    "contactNumber": "+1-555-1234",
+    "email": "john.doe@example.com"
+  },
+  "location": {
+    "country": "USA",
+    "state": "California",
+    "city": "Sunnyvale",
+    "zipCode": "94086"
+  },
+  "testDetails": {
+    "testType": "RT-PCR",
+    "testDate": "2025-05-07",
+    "result": "Positive",
+    "labName": "MediLab Diagnostics"
+  },
+  "vaccination": {
+    "status": "Fully Vaccinated",
+    "vaccineName": "Moderna",
+    "dose1Date": "2023-06-15",
+    "dose2Date": "2023-07-15"
+  },
+  "symptoms": [
+    "Fever",
+    "Cough",
+    "Fatigue"
+  ],
+  "isHospitalized": false,
+  "quarantine": {
+    "startDate": "2025-05-08",
+    "endDate": "2025-05-22",
+    "location": "Home"
+  }
+}

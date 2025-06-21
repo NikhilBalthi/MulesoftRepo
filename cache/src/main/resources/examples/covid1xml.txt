@@ -1,0 +1,40 @@
+<covidCase>
+    <caseId>CV20250508-001</caseId>
+    <patient>
+        <firstName>John</firstName>
+        <lastName>Doe</lastName>
+        <age>34</age>
+        <gender>Male</gender>
+        <contactNumber>+1-555-1234</contactNumber>
+        <email>john.doe@example.com</email>
+    </patient>
+    <location>
+        <country>USA</country>
+        <state>California</state>
+        <city>Sunnyvale</city>
+        <zipCode>94086</zipCode>
+    </location>
+    <testDetails>
+        <testType>RT-PCR</testType>
+        <testDate>2025-05-07</testDate>
+        <result>Positive</result>
+        <labName>MediLab Diagnostics</labName>
+    </testDetails>
+    <vaccination>
+        <status>Fully Vaccinated</status>
+        <vaccineName>Moderna</vaccineName>
+        <dose1Date>2023-06-15</dose1Date>
+        <dose2Date>2023-07-15</dose2Date>
+    </vaccination>
+    <symptoms>
+        <symptom>Fever</symptom>
+        <symptom>Cough</symptom>
+        <symptom>Fatigue</symptom>
+    </symptoms>
+    <isHospitalized>false</isHospitalized>
+    <quarantine>
+        <startDate>2025-05-08</startDate>
+        <endDate>2025-05-22</endDate>
+        <location>Home</location>
+    </quarantine>
+</covidCase>
