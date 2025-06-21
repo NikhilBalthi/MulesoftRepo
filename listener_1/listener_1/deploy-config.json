@@ -1,8 +1,0 @@
-{
-  "runtimeVersion": "4.9.6",
-  "workers": 1,
-  "workerType": "MICRO",
-  "target": "CH2",
-  "targetName": "Shared Space",
-  "environment": "Sandbox"
-}
